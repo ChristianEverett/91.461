@@ -1,0 +1,189 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+    "http://www.w3.org/TR/html4/strict.dtd"
+    >
+<html lang="en">
+<head>
+    <script type="text/javascript" src="js/jquery.js"></script><!--jQuery Libary-->
+    <script src="http://js.live.net/v5.0/wl.js"></script><!--SkyDrive Libary-->
+    <title>SkyDriveForm</title>
+</head>
+<body>
+    <form>
+            <label for="file">FileName:</label>
+            <input type="file" name="file" id="fileInput"><br>
+    </form>
+    
+    <div id="SkyDrive-upload"></div><br>
+    <div id="SkyDrive-download"></div><br>
+    
+    <h4>Link to Upload</h4>
+    <input type="text" size="50" name="link" id="link"><br>
+    
+    <input type="text" size="50" name="searchTextBox" id="searchTextBox">
+    <button id="searchButton">Search</button>
+    <div id="results">No results yet.</div>
+    
+    <script>
+        WL.init(
+	{ 
+	    client_id: '0000000040112A12', 
+	    redirect_uri: "http://www.cs.uml.edu/~ceverett/SkyDriveForm.html"
+	});
+        
+        function handleUpload(response) 
+	{
+	    var folder = response.data.folders[0];
+	    
+	    WL.upload({
+		path: folder.id,
+		element: "fileInput",
+		overwrite: "rename"
+	    }).then(
+	    function(response) {
+		// Handle the response
+		getSharedLink(response.id);
+	    },
+	    function(error) {
+		// Handle errors
+		//$('#error').html(error.error.message);
+	    },
+	    function(progress) {
+		// Handle progress events
+	    });
+	}
+
+        function handleDownload(response) 
+        {
+            var files = response.data.files;
+            for (var i = 0; i < files.length; i++) 
+            {
+                var file = files[i];
+                WL.download(
+                { 
+                    path: file.id + "/content" 
+                });
+            }
+        }
+        
+	function handleError(failureResponse)
+	{
+	    //$('#result').html(failureResponse.error.message);
+	}
+        
+        function getSharedLink(file_id) 
+        {    
+            WL.api(
+            {
+                path: file_id+"/shared_read_link",
+                method: "GET"
+            }).then(
+            function(response) {
+                // Get the link
+                $('#link').val(response.link);
+            },
+            function(responseFailed) {
+                // Handle an error
+                console.log(responseFailed.error.message);
+            });
+        }
+        
+        function search(search_text) 
+        {
+            var search_path = "me/skydrive/search?q="+search_text;
+            WL.api({
+                path: search_path,
+                method: "GET"
+            }).then(
+            function(response) 
+            {
+                var filenames = [];
+                // Loop through the list of returned files
+                // Get the name of each one
+                var found_files = response.data;
+                for (var i = 0; i < found_files.length; i++)
+                {
+                    var file = found_files[i];
+                    filenames[i] = file.name;
+                }
+                showResult(filenames);
+            },
+            function(responseFailed) 
+            {
+                // Handle an error
+                console.log(responseFailed.error.message);
+            });  
+        }
+        
+        function showResult(results)
+        {
+            // Generate list
+            var output = "<ol>";
+            if (results instanceof Array)
+            {
+                for (var i = 0; i < results.length; i++)
+                {
+                    output += "<li>" + results[i];
+                }
+            }
+            output += "</ol>";
+            $('#results').html(output);
+        }
+        
+        $(document).ready(function()
+	{
+            $(window).load(function()
+            {
+                WL.ui(//upLoad Button
+                {
+                    name: "skydrivepicker",
+                    element: "SkyDrive-upload",
+                    mode: "save",
+                    onselected: handleUpload,
+                    onerror: handleError
+                });
+                
+                WL.ui(//downLoad Button
+                {
+                    name: "skydrivepicker",
+                    element: "SkyDrive-download",
+                    mode: "open",
+                    select: "multi",
+                    onselected: handleDownload,
+                    onerror: handleError
+                });
+                
+                // Search Interface
+                // Check if the user is logged in
+                if (WL.getSession())
+                {
+                    // When the search button is clicked, do a search
+                    // using the input's contents
+                    $('#searchButton').click(function()
+                    {
+                       var search_text = $('#searchTextBox').val();
+                       search(search_text);
+                    });
+                }
+                /*
+                $("#SkyDriveButton").click(function()
+                {
+                    WL.login({
+                    scope: ["wl.skydrive wl.signin"]
+                    }).then(
+                    // Handle a successful login
+                    function(response)
+                    {
+                        //$('#status').html("<strong>Success! Logged in.</strong>");
+                    },
+                    // Handle a failed login
+                    function(responseFailed)
+                    {
+                        // The user might have clicked cancel, etc.
+                        //$('#status').html(responseFailed.error.message);
+                    });	
+                });*/			
+            });
+	});
+    </script>
+</body>
+</html>

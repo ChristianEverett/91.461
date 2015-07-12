@@ -1,0 +1,38 @@
+<html>
+<head>
+	<style>
+		body
+		{
+			position:absolute;
+			top:60%;
+			left:40%;
+		}
+	</style>
+</head>
+<body>
+
+<form name="uploadform" action="upload.php" method="post"
+      enctype="multipart/form-data" onsubmit="return validateUpLoadForm()">
+	<label for="file">Filename:</label>
+	<input type="file" name="file" id="file"><br>
+	<input type="submit" name="submit" value="UpLoadFileToServer">
+</form>
+
+<script>
+	const BytesPerMegaByte = 1048576;
+	const MaxMegaBytes = 500;
+	
+	function validateUpLoadForm()
+	{
+		var file = document.getElementById("file").files[0];
+		alert("12345");
+		if(file.size/ByesPerMegaByte > MaxMegaBytes)
+		{
+			alert(MaxMegaBytes);
+			return false;
+		}
+	}
+</script>
+
+</body>
+</html>

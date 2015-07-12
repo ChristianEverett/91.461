@@ -1,0 +1,30 @@
+<html>
+<body>
+<?php
+  echo "print";
+?>
+<form name="emailForm" action="email.php" method='post' onsubmit="return validateEmailForm()">
+  Email:&nbsp&nbsp&nbsp <input name='email' type='text' size='30'><br>
+  Subject: <input name='subject' type='text' size='30'><br>
+  Message:<br>
+  <textarea name='message' rows='15' cols='40'>
+  </textarea><br>
+  <input type='submit'>
+ </form>
+
+<script>
+function validateEmailForm()
+{
+	var x = document.forms["emailForm"]["email"].value;
+	var atpos = x.indexOf("@");
+	var dotpos = x.lastIndexOf(".");
+	if (atpos < 1 || dotpos < atpos+2 || dotpos+2 >= x.length || x == "")
+	{
+		alert("Not a valid e-mail address");
+		return false;
+	}
+}
+</script>
+
+</body>
+</html>

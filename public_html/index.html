@@ -1,0 +1,95 @@
+<!-- Christian Everett
+	 ceverett@cs.uml.edu
+	 Undergrade CS
+	 7/4/2015
+	 index for future 91.461 assignments
+-->
+<!DOCTYPE html>
+<head>
+	<link type="text/css" rel="stylesheet" href="index.css"/>
+	<script type="text/javascript" src="js/jquery.js"></script><!--jQuery Libary-->
+	<script type="text/javascript" src="js/jquery-ui.js"></script><!--jQuery_UI Libary-->
+	<title>Christian Everett</title>
+</head>
+<body>
+	<img id="background" src="Img/Binary.jpg" alt="Missing">
+	
+	<div id="header">
+		<h1 id="Title"><em>Christian Everett</em></h1>
+		<img id= "cs_logo" src="Img/cs_logo2.png" alt="Missing">
+		<img id= "cs_logo2" src="Img/cs_logo2.png" alt="Missing">
+		<a href='http://www.uml.edu/'><img id="uml_logo" src="Img/uml_logo.jpg" alt="Missing"></a>
+	</div>
+	
+	<!-- Button table for selecting an Assignment (Assignment 2 is the page itself) -->
+	<table id="ButtonTable">
+		<tr>
+			<td onclick="window.location.href='empty.html'">Assignment 3</td>
+			<td onclick="window.location.href='empty.html'">Assignment 4</td>
+		</tr>
+		
+		<tr>
+			<td onclick="window.location.href='empty.html'">Assignment 5</td>
+			<td onclick="window.location.href='empty.html'">Assignment 6</td>
+		</tr>
+		
+		<tr>
+			<td onclick="window.location.href='empty.html'">Assignment 7</td>
+			<td onclick="window.location.href='empty.html'">Assignment 8</td>
+		</tr>
+		
+		<tr>
+			<td onclick="window.location.href='empty.html'">Assignment 9</td>
+			<td onclick="window.location.href='download/Resume.docx'">Resume</td>
+		</tr>
+	</table>
+	
+	<div><img id="mario" src="Img/mario.jpg" alt="Missing"></div>
+		
+	<script>
+	<!-- JQuery for animating the Button table -->
+	$(document).ready(function()
+	{
+		$(window).load(function()
+		{
+			$("h1").draggable(); 
+			$("#contactBox").draggable();
+			$("#uml_logo").draggable();
+			$("td").mouseenter(function()
+			{
+				$(this).fadeTo("fast",1);
+			});
+			
+			$("td").mouseleave(function()
+			{
+				$(this).fadeTo("fast",0.8);	
+			});
+			
+			$(document).keydown(function(key)
+			{
+			    switch(parseInt(key.which,10))
+			    {
+				case 37://left //animate(properties, speed)
+				$('#mario').animate({left: "-=30px"}, 0.5);
+					break;
+				case 38://up
+				$('#mario').animate({top: "-=30px"}, 0.5);
+					break;
+				case 39://right
+				$('#mario').animate({left: "+=30px"}, 0.5);
+					break;
+				case 40://down
+				$('#mario').animate({top: "+=30px"}, 0.5);
+					break;
+				case 32://space bar
+				$('#mario').animate({height: "+=30px", width: "+=20px"},100);
+					break;
+				default:
+					break;
+			    }
+			});			
+		});
+	});
+	</script>
+</body>
+</html>
