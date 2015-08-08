@@ -9,6 +9,7 @@ body
 	overflow: hidden;
 	background-color: #000000;
 }
+/*Set background underneath other objects*/
 #background
 {
 	position:absolute;
@@ -17,6 +18,7 @@ body
 	top: 0%;
 	z-index:-2;
 }
+/*CS logos are place at bottom right and left corners*/
 #cs_logo
 {
 	position: absolute;
@@ -29,32 +31,7 @@ body
 	right: 0%;
 	bottom: 0%;
 }
-#uml_logo
-{
-	position: absolute;
-	top: 9%;
-	right: 45%;
-	width: 9%;
-	height: 19%;
-	border: 2px solid black;
-}
-#contactBox
-{
-	position: absolute;
-	height: 10%;
-	width: 20%;
-	left: 5%;
-}
-#mario
-{
-	position:absolute;
-	width:4%;
-	height:7%;
-	top:83%;
-	left:6%;
-	z-index:-1;
-	visibility: hidden;
-}
+/*Button table place center screen*/
 #ButtonTable
 {
 	position:absolute;
@@ -79,6 +56,26 @@ body
 	cursor:pointer;
 	background-clip: padding-box
 }
+#uml_logo
+{
+	position: absolute;
+	top: 9%;
+	right: 45%;
+	width: 9%;
+	height: 19%;
+	border: 2px solid black;
+}
+#mario
+{
+	position:absolute;
+	width:4%;
+	height:7%;
+	top:83%;
+	left:6%;
+	z-index:-1;
+	visibility: hidden;
+}
+
 
 
 
