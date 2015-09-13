@@ -1,96 +1,138 @@
+<!DOCTYPE html>
 <!-- Christian Everett
 	 ceverett@cs.uml.edu
-	 Undergrade CS
+	 Undergrad CS
 	 7/4/2015
 	 index for future 91.461 assignments
+	 index.html
 -->
-<!DOCTYPE html>
+<html>
 <head>
-	<link type="text/css" rel="stylesheet" href="index.css"/>
-	<script type="text/javascript" src="js/jquery.js"></script><!--jQuery Libary-->
-	<script type="text/javascript" src="js/jquery-ui.js"></script><!--jQuery_UI Libary-->
-	<title>Christian Everett</title>
+    <!-- links the CSS source and jquery librays for this HTML document -->
+    <link type="text/css" rel="stylesheet" href="css/index.css"/>
+    <!--jQuery Libary-->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <!--jQuery_UI Libary-->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+    <title>Christian Everett</title>
 </head>
 <body>
 
-	<img id="background" src="Img/Binary.jpg" alt="Missing">
-	
-	<!-- Images used on page -->
-	<div id="header">
-		<h1 id="Title"><em>91.461 GUI I</em></h1>
-		<img id= "cs_logo" src="Img/cs_logo2.png" alt="Missing">
-		<img id= "cs_logo2" src="Img/cs_logo2.png" alt="Missing">
-		<a href='http://www.uml.edu/'><img id="uml_logo" src="Img/uml_logo.jpg" alt="Missing"></a>
-	</div>
-	
-	<!-- Button table for selecting an Assignment (Assignment 2 is the page itself) -->
-	<table id="ButtonTable">
-		<tr>
-			<td onclick="window.location.href=''">Assignment 2</td>
-			<td onclick="window.location.href='empty.html'">Assignment 3</td>
-		</tr>
-		
-		<tr>
-			<td onclick="window.location.href='empty.html'">Assignment 4</td>
-			<td onclick="window.location.href='empty.html'">Assignment 5</td>
-		</tr>
-		
-		<tr>
-			<td onclick="window.location.href='empty.html'">Assignment 6</td>
-			<td onclick="window.location.href='empty.html'">Assignment 7</td>
-		</tr>
-		
-		<tr>
-			<td onclick="window.location.href='empty.html'">Assignment 8</td>
-			<td onclick="window.location.href='empty.html'">Assignment 9</td>
-		</tr>
-	</table>
-	
-	<div><img id="mario" src="Img/mario.jpg" alt="Missing"></div>
-		
-	<script>
-	<!-- JQuery for animating the Button table -->
-	$(document).ready(function()
-	{
-		$(window).load(function()
-		{
-			$("h1").draggable(); 
-			$("#uml_logo").draggable();
-			$("td").mouseenter(function()
-			{
-				$(this).fadeTo("fast",1);
-			});
-			
-			$("td").mouseleave(function()
-			{
-				$(this).fadeTo("fast",0.8);	
-			});
-			
-			$(document).keydown(function(key)
-			{
-			    switch(parseInt(key.which,10))
-			    {
-				case 37://left //animate(properties, speed)
-				$('#mario').animate({left: "-=30px"}, 0.5);
-					break;
-				case 38://up
-				$('#mario').animate({top: "-=30px"}, 0.5);
-					break;
-				case 39://right
-				$('#mario').animate({left: "+=30px"}, 0.5);
-					break;
-				case 40://down
-				$('#mario').animate({top: "+=30px"}, 0.5);
-					break;
-				case 32://space bar
-				$('#mario').animate({height: "+=30px", width: "+=20px"},100);
-					break;
-				default:
-					break;
-			    }
-			});			
-		});
-	});
-	</script>
+<img id="background" src="Img/new_york.jpg" alt="Missing">
+
+<!-- Images used on page -->
+<div id="header">
+    <a href="http://jigsaw.w3.org/css-validator/check/referer">
+        <img style="border: 0; width: 88px; height: 31px" src="http://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Valid CSS!"/>
+    </a>
+    <h1 id="Title">91.461 GUI I</h1>
+</div>
+
+<!--Provides links to my linkin github and email -->
+<div id="contactArea">
+    <a href="mailto:ceverett@cs.uml.edu" >
+        <h4>Ceverett@cs.uml.edu</h4>
+    </a>
+    <a href="https://www.linkedin.com/in/christianeverett">
+        <span id="LinkedIn">LinkedIn</span>
+    </a>
+    <a href="https://github.com/ChristianEverett">
+        <span id="Github">Github</span>
+    </a>
+</div>
+
+<!-- Button table for selecting an Assignment (Assignment 2 is the page itself) -->
+<table id="ButtonTable">
+    <tr>
+        <td onclick="alert('Currently on Assignment 2')">Assignment 2</td>
+        <td class="empty">Assignment 3</td>
+    </tr>
+
+    <tr>
+        <td class="empty">Assignment 4</td>
+        <td onclick="window.location.href='empty.html'">Assignment 5</td>
+    </tr>
+
+    <tr>
+        <td class="empty">Assignment 6</td>
+        <td class="empty">Assignment 7</td>
+    </tr>
+
+    <tr>
+        <td class="empty">Assignment 8</td>
+        <td class="empty">Assignment 9</td>
+    </tr>
+    <!-- onclick="window.location.href='empty.html'" -->
+</table>
+
+<div>
+    <img id="mario" src="Img/mario.jpg" alt="Missing">
+</div>
+
+<script>
+    //jQuery for animating the Button table
+    $(document).ready(function ()
+    {
+        $(window).load(function ()
+        {
+            //Setting element draggable for design process
+            $("h1").draggable();
+            $("#uml_logo").draggable();
+
+            //Set the Button table buttons to change opacity when hovered over
+            $("td").mouseenter(function ()
+            {
+                $(this).fadeTo("fast", 1);
+            });
+
+            $("td").mouseleave(function ()
+            {
+                $(this).fadeTo("fast", 0.5);
+            });
+
+            //button table will redirect to an empty html document for the assignments that have not been implemented
+            $(".empty").click(function ()
+            {
+                $(location).attr('href', 'empty.html');
+            });
+
+            //Ignore the following
+            $(document).keydown(function (key)
+            {
+                switch (parseInt(key.which, 10))
+                {
+                    case 37://left //animate(properties, speed)
+                        $('#mario').animate({
+                            left: "-=30px"
+                        }, 0.5);
+                        break;
+                    case 38://up
+                        $('#mario').animate({
+                            top: "-=30px"
+                        }, 0.5);
+                        break;
+                    case 39://right
+                        $('#mario').animate({
+                            left: "+=30px"
+                        }, 0.5);
+                        break;
+                    case 40://down
+                        $('#mario').animate({
+                            top: "+=30px"
+                        }, 0.5);
+                        break;
+                    case 32://space bar
+                        $('#mario').animate({
+                            height: "+=30px",
+                            width: "+=20px"
+                        }, 100);
+                        break;
+                    default:
+                        break;
+                }
+            });
+        });
+    });
+</script>
 </body>
 </html>
