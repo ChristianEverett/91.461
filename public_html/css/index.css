@@ -1,0 +1,254 @@
+/*Center title at the top of screen */
+#Title
+{
+    position: absolute;
+    text-align: center;
+    text-shadow: 1px 2px red;
+    font-size: 50px;
+    /*text-decoration:underline;*/
+    color: black;
+    top: -1%;
+    left: 42%;
+}
+/*All links and draggable items use pointer cursor*/
+#Title:hover
+{
+    cursor: pointer;
+}
+
+#contactArea
+{
+    margin-left: 1%;
+    margin-top: 1%;
+    display: inline-block;
+}
+/*Remove all link underlines */
+a
+{
+    text-decoration: none;
+}
+/*set email button with styles built from http://livetools.uiparade.com/button-builder.html*/
+h4
+{
+    border: 1px solid #0a3c59;
+    background: #0085fa;
+    background: -webkit-gradient(linear, left top, left bottom, from(#002480), to(#0085fa));
+    background: -webkit-linear-gradient(top, #002480, #0085fa);
+    background: -moz-linear-gradient(top, #002480, #0085fa);
+    background: -ms-linear-gradient(top, #002480, #0085fa);
+    background: -o-linear-gradient(top, #002480, #0085fa);
+    background-image: -ms-linear-gradient(top, #002480 0%, #0085fa 100%);
+    padding: 7px 14px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    -webkit-box-shadow: rgba(255, 255, 255, 0.4) 0 0px 0, inset rgba(255, 255, 255, 0.4) 0 0px 0;
+    -moz-box-shadow: rgba(255, 255, 255, 0.4) 0 0px 0, inset rgba(255, 255, 255, 0.4) 0 0px 0;
+    box-shadow: rgba(255, 255, 255, 0.4) 0 0px 0, inset rgba(255, 255, 255, 0.4) 0 0px 0;
+    text-shadow: #7ea4bd 0 1px 0;
+    color: #1fcbff;
+    font-size: 19px;
+    font-family: helvetica, serif;
+    text-decoration: none;
+    vertical-align: middle;
+}
+
+h4:hover
+{
+    border: 1px solid #0a3c59;
+    text-shadow: #1e4158 0 1px 0;
+    background: #f20000;
+    background: -webkit-gradient(linear, left top, left bottom, from(#000000), to(#f20000));
+    background: -webkit-linear-gradient(top, #000000, #f20000);
+    background: -moz-linear-gradient(top, #000000, #f20000);
+    background: -ms-linear-gradient(top, #000000, #f20000);
+    background: -o-linear-gradient(top, #000000, #f20000);
+    background-image: -ms-linear-gradient(top, #000000 0%, #f20000 100%);
+    color: #fff;
+    cursor: pointer;
+}
+
+h4:active
+{
+    text-shadow: #1e4158 0 1px 0;
+    border: 1px solid #0a3c59;
+    background: #65a9d7;
+    background: -webkit-gradient(linear, left top, left bottom, from(#3e779d), to(#f20000));
+    background: -webkit-linear-gradient(top, #3e779d, #65a9d7);
+    background: -moz-linear-gradient(top, #3e779d, #65a9d7);
+    background: -ms-linear-gradient(top, #3e779d, #65a9d7);
+    background: -o-linear-gradient(top, #3e779d, #65a9d7);
+    background-image: -ms-linear-gradient(top, #3e779d 0%, #65a9d7 100%);
+    color: #fff;
+}
+/*set LinkIn button with styles built from http://livetools.uiparade.com/button-builder.html*/
+#LinkedIn
+{
+    position: absolute;
+    left: 38px;
+    top: 135px;
+    border: 1px solid #0a3c59;
+    background: #0085fa;
+    background: -webkit-gradient(linear, left top, left bottom, from(#002480), to(#0085fa));
+    background: -webkit-linear-gradient(top, #002480, #0085fa);
+    background: -moz-linear-gradient(top, #002480, #0085fa);
+    background: -ms-linear-gradient(top, #002480, #0085fa);
+    background: -o-linear-gradient(top, #002480, #0085fa);
+    background-image: -ms-linear-gradient(top, #002480 0%, #0085fa 100%);
+    padding: 7px 14px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    -webkit-box-shadow: rgba(255, 255, 255, 0.4) 0 0px 0, inset rgba(255, 255, 255, 0.4) 0 0px 0;
+    -moz-box-shadow: rgba(255, 255, 255, 0.4) 0 0px 0, inset rgba(255, 255, 255, 0.4) 0 0px 0;
+    box-shadow: rgba(255, 255, 255, 0.4) 0 0px 0, inset rgba(255, 255, 255, 0.4) 0 0px 0;
+    text-shadow: #7ea4bd 0 1px 0;
+    color: #1fcbff;
+    font-size: 19px;
+    font-family: helvetica, serif;
+    text-decoration: none;
+    vertical-align: middle;
+}
+
+#LinkedIn:hover
+{
+    border: 1px solid #0a3c59;
+    text-shadow: #1e4158 0 1px 0;
+    background: #f20000;
+    background: -webkit-gradient(linear, left top, left bottom, from(#000000), to(#f20000));
+    background: -webkit-linear-gradient(top, #000000, #f20000);
+    background: -moz-linear-gradient(top, #000000, #f20000);
+    background: -ms-linear-gradient(top, #000000, #f20000);
+    background: -o-linear-gradient(top, #000000, #f20000);
+    background-image: -ms-linear-gradient(top, #000000 0%, #f20000 100%);
+    color: #fff;
+    cursor: pointer;
+}
+
+#LinkedIn:active
+{
+    text-shadow: #1e4158 0 1px 0;
+    border: 1px solid #0a3c59;
+    background: #65a9d7;
+    background: -webkit-gradient(linear, left top, left bottom, from(#3e779d), to(#f20000));
+    background: -webkit-linear-gradient(top, #3e779d, #65a9d7);
+    background: -moz-linear-gradient(top, #3e779d, #65a9d7);
+    background: -ms-linear-gradient(top, #3e779d, #65a9d7);
+    background: -o-linear-gradient(top, #3e779d, #65a9d7);
+    background-image: -ms-linear-gradient(top, #3e779d 0%, #65a9d7 100%);
+    color: #fff;
+}
+/*set Github button with styles built from http://livetools.uiparade.com/button-builder.html*/
+#Github
+{
+    position: absolute;
+    left: 144px;
+    top: 135px;
+    border: 1px solid #0a3c59;
+    background: #0085fa;
+    background: -webkit-gradient(linear, left top, left bottom, from(#002480), to(#0085fa));
+    background: -webkit-linear-gradient(top, #002480, #0085fa);
+    background: -moz-linear-gradient(top, #002480, #0085fa);
+    background: -ms-linear-gradient(top, #002480, #0085fa);
+    background: -o-linear-gradient(top, #002480, #0085fa);
+    background-image: -ms-linear-gradient(top, #002480 0%, #0085fa 100%);
+    padding: 7px 14px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    -webkit-box-shadow: rgba(255, 255, 255, 0.4) 0 0px 0, inset rgba(255, 255, 255, 0.4) 0 0px 0;
+    -moz-box-shadow: rgba(255, 255, 255, 0.4) 0 0px 0, inset rgba(255, 255, 255, 0.4) 0 0px 0;
+    box-shadow: rgba(255, 255, 255, 0.4) 0 0px 0, inset rgba(255, 255, 255, 0.4) 0 0px 0;
+    text-shadow: #7ea4bd 0 1px 0;
+    color: #1fcbff;
+    font-size: 19px;
+    font-family: helvetica, serif;
+    text-decoration: none;
+    vertical-align: middle;
+}
+
+#Github:hover
+{
+    border: 1px solid #0a3c59;
+    text-shadow: #1e4158 0 1px 0;
+    background: #f20000;
+    background: -webkit-gradient(linear, left top, left bottom, from(#000000), to(#f20000));
+    background: -webkit-linear-gradient(top, #000000, #f20000);
+    background: -moz-linear-gradient(top, #000000, #f20000);
+    background: -ms-linear-gradient(top, #000000, #f20000);
+    background: -o-linear-gradient(top, #000000, #f20000);
+    background-image: -ms-linear-gradient(top, #000000 0%, #f20000 100%);
+    color: #fff;
+    cursor: pointer;
+}
+
+#Github:active
+{
+    text-shadow: #1e4158 0 1px 0;
+    border: 1px solid #0a3c59;
+    background: #65a9d7;
+    background: -webkit-gradient(linear, left top, left bottom, from(#3e779d), to(#f20000));
+    background: -webkit-linear-gradient(top, #3e779d, #65a9d7);
+    background: -moz-linear-gradient(top, #3e779d, #65a9d7);
+    background: -ms-linear-gradient(top, #3e779d, #65a9d7);
+    background: -o-linear-gradient(top, #3e779d, #65a9d7);
+    background-image: -ms-linear-gradient(top, #3e779d 0%, #65a9d7 100%);
+    color: #fff;
+}
+
+/*Set background underneath other objects*/
+#background
+{
+    position: fixed;
+    left: 0%;
+    right: 0%;
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    z-index: -2;
+}
+
+/*Button table place center screen*/
+#ButtonTable
+{
+    position: absolute;
+    bottom: 6%;
+    left: 42%;
+    border-collapse: collapse;
+}
+
+/*This represents each button in the button table*/
+#ButtonTable tr td
+{
+    text-align: center;
+    vertical-align: middle;
+    background-color: red;
+    height: 80px;
+    width: 130px;
+    /*border-radius: 5px;*/
+    border-radius: 0%;
+    font-family: Verdana, Arial, Sans-Serif;
+    text-decoration: none;
+    border: 2px solid black;
+    opacity: 0.5;
+    font-weight: bold;
+    cursor: pointer;
+    background-clip: padding-box;
+    color: black;
+}
+
+/*Ignore*/
+#mario
+{
+    position: absolute;
+    width: 4%;
+    height: 7%;
+    top: 83%;
+    left: 6%;
+    z-index: -1;
+    visibility: hidden;
+}
+
+
+
+
