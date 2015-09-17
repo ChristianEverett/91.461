@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- links the CSS source and jquery librays for this HTML document -->
+    <link type="text/css" rel="stylesheet" href="css/Format-Dynamic-Text.css"/>
+    <!--jQuery Libary-->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <title>Formatting Dynamic Text</title>
+</head>
+<body>
+
+
+<script>
+    function PrintText()
+    {
+        var strContent = "";
+
+        // create dynamic content from JSON
+        strContent += "<h1 class='title'>" + story.title + "</h1>";
+        strContent += "<h2 class='author'>by " + story.author + "</h2>";
+        strContent += "<h2 class='authorsTitle'>" + story.authorsTitle + "</h2>";
+        strContent += "<h3 class='locationLabel'>delivered at:</h3>";
+        strContent += "<h3 class='location'>" + story.location + "</h3>";
+        strContent += "<h3 class='date'>" + story.date + "</h3>";
+
+        // loop through all the paragraphs and sentences
+        for (var para = 0; para < story.text.paragraphs.length; para++)
+        {
+            strContent += "<p class=\"firefox\">";
+            for (var sent = 0; sent < story.text.paragraphs[para].length; sent++)
+            {
+                strContent += story.text.paragraphs[para][sent] + "&nbsp; ";
+            }
+            strContent += "</p>";
+        }
+        // place dynamic content on page
+        // document.getElementById( "content" ).innerHTML = strContent ;
+        $("#content").html(strContent);
+    }
+
+    jQuery.ajax(
+    {
+        async: false,
+        dataType: "json",
+        url: "GettysburgAddress-v2.json",
+        success: function (data)
+        {
+            story = data;
+        }
+    });
+
+    $(document).ready(function ()
+    {
+        PrintText();
+    });
+</script>
+</body>
+</html>
