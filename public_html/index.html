@@ -50,8 +50,8 @@
     </tr>
 
     <tr>
-        <td class="empty">Add to Github</td>
-        <td class="empty">Format Dynamic Text</td>
+        <td onclick="window.location.href='https://christianeverett.github.io/91.461/public_html/'">Add to Github</td>
+        <td onclick="window.location.href='Format-Dynamic-Text.html'">Format Dynamic Text</td>
     </tr>
 
     <tr>
@@ -66,70 +66,8 @@
     <!-- onclick="window.location.href='empty.html'" -->
 </table>
 
-<script>
-    //jQuery for animating the Button table
-    $(document).ready(function ()
-    {
-        $(window).load(function ()
-        {
-            //Setting element draggable for design process
-            $("h1").draggable();
-            $("#uml_logo").draggable();
+<script src="js/index.js">
 
-            //Set the Button table buttons to change opacity when hovered over
-            $("td").mouseenter(function ()
-            {
-                $(this).fadeTo("fast", 1);
-            });
-
-            $("td").mouseleave(function ()
-            {
-                $(this).fadeTo("fast", 0.5);
-            });
-
-            //button table will redirect to an empty html document for the assignments that have not been implemented
-            $(".empty").click(function ()
-            {
-                $(location).attr('href', 'empty.html');
-            });
-
-            //Ignore the following
-            $(document).keydown(function (key)
-            {
-                switch (parseInt(key.which, 10))
-                {
-                    case 37://left //animate(properties, speed)
-                        $('#mario').animate({
-                            left: "-=30px"
-                        }, 0.5);
-                        break;
-                    case 38://up
-                        $('#mario').animate({
-                            top: "-=30px"
-                        }, 0.5);
-                        break;
-                    case 39://right
-                        $('#mario').animate({
-                            left: "+=30px"
-                        }, 0.5);
-                        break;
-                    case 40://down
-                        $('#mario').animate({
-                            top: "+=30px"
-                        }, 0.5);
-                        break;
-                    case 32://space bar
-                        $('#mario').animate({
-                            height: "+=30px",
-                            width: "+=20px"
-                        }, 100);
-                        break;
-                    default:
-                        break;
-                }
-            });
-        });
-    });
 </script>
 </body>
 </html>

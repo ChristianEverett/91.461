@@ -1,3 +1,10 @@
+<!--
+Created by Christian Everett on 9/23/2015.
+ceverett@cs.uml.edu
+Undergrad CS
+91.461 assignment 5 formatting dynamic text
+Format-Dynamic-Text.html
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,50 +17,9 @@
 </head>
 <body>
 
+<div id="dynamic-content"></div>
 
-<script>
-    function PrintText()
-    {
-        var strContent = "";
-
-        // create dynamic content from JSON
-        strContent += "<h1 class='title'>" + story.title + "</h1>";
-        strContent += "<h2 class='author'>by " + story.author + "</h2>";
-        strContent += "<h2 class='authorsTitle'>" + story.authorsTitle + "</h2>";
-        strContent += "<h3 class='locationLabel'>delivered at:</h3>";
-        strContent += "<h3 class='location'>" + story.location + "</h3>";
-        strContent += "<h3 class='date'>" + story.date + "</h3>";
-
-        // loop through all the paragraphs and sentences
-        for (var para = 0; para < story.text.paragraphs.length; para++)
-        {
-            strContent += "<p class=\"firefox\">";
-            for (var sent = 0; sent < story.text.paragraphs[para].length; sent++)
-            {
-                strContent += story.text.paragraphs[para][sent] + "&nbsp; ";
-            }
-            strContent += "</p>";
-        }
-        // place dynamic content on page
-        // document.getElementById( "content" ).innerHTML = strContent ;
-        $("#content").html(strContent);
-    }
-
-    jQuery.ajax(
-    {
-        async: false,
-        dataType: "json",
-        url: "GettysburgAddress-v2.json",
-        success: function (data)
-        {
-            story = data;
-        }
-    });
-
-    $(document).ready(function ()
-    {
-        PrintText();
-    });
+<script src="js/Format-Dynamic-Text.js">
 </script>
 </body>
 </html>
