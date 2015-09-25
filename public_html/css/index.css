@@ -244,17 +244,6 @@ h4:active
     color: black;
 }
 
-/*Ignore*/
-#mario
-{
-    position: absolute;
-    width: 4%;
-    height: 7%;
-    top: 83%;
-    left: 6%;
-    z-index: -1;
-    visibility: hidden;
-}
 
 
 

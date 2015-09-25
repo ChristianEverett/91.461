@@ -1,4 +1,59 @@
-body
+/**
+ Created by Christian Everett on 9/23/2015.
+ ceverett@cs.uml.edu
+ Undergrad CS
+ css for 91.461 assignment 5
+ Format-Dynamic-Text.css
+ */
+table
 {
-    background-color: black;
+    position: absolute;
+    left: 42%;
+    border: solid black 2px;
+}
+
+td
+{
+    padding-top: 60px;
+    font-size: 35px;
+}
+
+.red
+{
+    color: red;
+}
+
+.green
+{
+    color: green;
+}
+
+.blue
+{
+    color: blue;
+}
+
+.cyan
+{
+    color: cyan;
+}
+
+.magenta
+{
+    color: magenta;
+}
+
+.yellow
+{
+    color: yellow;
+}
+
+.black
+{
+    color: black;
+}
+
+.orange
+{
+    color: orange;
 }
