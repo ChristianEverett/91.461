@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <!--
 Created by Christian Everett on 9/23/2015.
 ceverett@cs.uml.edu
@@ -5,7 +6,6 @@ Undergrad CS
 91.461 assignment 5 formatting dynamic text
 Format-Dynamic-Text.html
 -->
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -17,8 +17,21 @@ Format-Dynamic-Text.html
 </head>
 <body>
 
+<!--code from validator-->
+<p>
+    <a href="https://jigsaw.w3.org/css-validator/check/referer">
+        <img style="border:0;width:88px;height:31px"
+             src="https://jigsaw.w3.org/css-validator/images/vcss-blue"
+             alt="Valid CSS!" />
+    </a>
+</p>
+
+<h1>Dynamically Generated Text</h1>
+
+<!--This div is a place holder for the dynamically generated html that will be read from a json file-->
 <div id="dynamic-content"></div>
 
+<!--javascript for handling the json parsing and ajax call-->
 <script src="js/Format-Dynamic-Text.js">
 </script>
 </body>

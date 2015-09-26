@@ -5,19 +5,40 @@
  css for 91.461 assignment 5
  Format-Dynamic-Text.css
  */
+
+body
+{
+    background-color: black;
+}
+/*h1 is used as a page title */
+h1
+{
+    color: white;
+    text-align: center;
+}
+/*float the css validator left so its on the same line as the h1 */
+p
+{
+    float: left;
+}
+
+/*This table and td style are used to hold the dynamically generated html*/
 table
 {
     position: absolute;
     left: 42%;
     border: solid black 2px;
+    padding-top: 10px;
 }
-
+/*space out the table elements */
 td
 {
-    padding-top: 60px;
+    padding-bottom: 60px;
     font-size: 35px;
 }
 
+/* each color class is used to set the color of the dynamically generated tr
+*  each of these classes and dynamically generated using json*/
 .red
 {
     color: red;
@@ -48,9 +69,9 @@ td
     color: yellow;
 }
 
-.black
+.violet
 {
-    color: black;
+    color: violet;
 }
 
 .orange
