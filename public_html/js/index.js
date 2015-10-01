@@ -2,7 +2,7 @@
  Created by Christian Everett on 9/23/2015.
  ceverett@cs.uml.edu
  Undergrad CS
- javascript for 91.461 assignment 1
+ javascript for 91.461 assignment 2
  index.js
  */
     //jQuery for animating the Button table

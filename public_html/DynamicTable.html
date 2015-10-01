@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<!-- Christian Everett
+	 ceverett@cs.uml.edu
+	 Undergrad CS
+	 9/28/2015
+	 assignment 6 for 91.461
+	 DynamicTable.html
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- links the CSS source and jquery librays for this HTML document -->
+    <link type="text/css" rel="stylesheet" href="css/DynamicTable.css"/>
+    <title>Dynamic Table</title>
+</head>
+<body>
+<!--validator code-->
+<p>
+    <a href="http://css-validator.org/check/referer">
+        <img style="border:0;width:88px;height:31px"
+             src="http://css-validator.org/images/vcss-blue.png"
+             alt="Valid CSS!" />
+    </a>
+</p>
+
+<h1>Dynamic Table Assignment</h1>
+<br><br>
+
+<!--form used to accept input of eight numbers from user.
+    on submit submitNumber javascript function processes input.
+    inputs are of type number to force the user to only enter valid data-->
+<form action="javascript:submitNumbers()">
+    <label>Enter four numbers:</label>
+    <input type="number" id="first_number">
+    <input type="number" id="second_number">
+    <input type="number" id="third_number">
+    <input type="number" id="fourth_number">
+    <br>
+    <label>Enter four numbers:</label>
+    <input type="number" id="fifth_number">
+    <input type="number" id="sixth_number">
+    <input type="number" id="seventh_number">
+    <input type="number" id="eighth_number">
+    <input type="submit" value="Submit">
+</form>
+
+<!--space holder table, table will be filled dynamically with user input-->
+<table id="multiplicationTable">
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+</table>
+
+<!--javascript for this html file-->
+<script src="js/DynamicTable.js">
+</script>
+
+</body>
+</html>
