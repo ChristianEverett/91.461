@@ -8,7 +8,7 @@
 -->
 <html>
 <head>
-    <!-- links the CSS source and jquery librays for this HTML document -->
+    <!-- links the CSS source and jquery library for this HTML document -->
     <link type="text/css" rel="stylesheet" href="css/index.css"/>
     <!--jQuery Libary-->
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
@@ -19,51 +19,53 @@
 </head>
 <body>
 
-<img id="background" src="Img/new_york.jpg" alt="Missing">
+<img id="background" src="Img/indexbackground.jpg" alt="Missing">
 
-<!-- Code from css validator -->
-<div id="header">
-    <a href="http://jigsaw.w3.org/css-validator/check/referer">
-        <img style="border: 0; width: 88px; height: 31px" src="http://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Valid CSS!"/>
-    </a>
-    <h1 id="Title">91.461 GUI I</h1>
+<div>
+    <!-- Code from css validator -->
+    <div id="header">
+        <a href="http://jigsaw.w3.org/css-validator/check/referer">
+            <img style="border: 0; width: 88px; height: 31px" src="http://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Valid CSS!"/>
+        </a>
+        <h1 id="Title">91.461 GUI I</h1>
+    </div>
+
+    <!--Provides links to my linkin github and email -->
+    <div id="contactArea">
+        <a href="mailto:ceverett@cs.uml.edu" >
+            <h4>Ceverett@cs.uml.edu</h4>
+        </a>
+        <a href="https://www.linkedin.com/in/christianeverett">
+            <span id="LinkedIn">LinkedIn</span>
+        </a>
+        <a href="https://github.com/ChristianEverett">
+            <span id="Github">Github</span>
+        </a>
+    </div>
+
+    <!-- Button table for selecting an Assignment (Assignment 2 and 3 is the page itself) -->
+    <table id="ButtonTable">
+        <tr><!--onclick="window.location.href='empty.html'"-->
+            <td onclick="alert('Currently on Assignment 2')">Create Webpage</td>
+            <td onclick="alert('Currently on Assignment 3')">Add CSS</td>
+        </tr>
+
+        <tr>
+            <td onclick="window.location.href='https://christianeverett.github.io/91.461/public_html/'">Add to Github</td>
+            <td onclick="window.location.href='Format-Dynamic-Text.html'">Format Dynamic Text</td>
+        </tr>
+
+        <tr>
+            <td onclick="window.location.href='DynamicTable.html'">Create Dynamic Table</td>
+            <td onclick="window.location.href=''">jQuery Validation Plugin</td>
+        </tr>
+
+        <tr>
+            <td onclick="window.location.href='SinglePageNavigation.html'">Single-Page Navigation</td>
+            <td class="empty">AngularJS</td>
+        </tr>
+    </table>
 </div>
-
-<!--Provides links to my linkin github and email -->
-<div id="contactArea">
-    <a href="mailto:ceverett@cs.uml.edu" >
-        <h4>Ceverett@cs.uml.edu</h4>
-    </a>
-    <a href="https://www.linkedin.com/in/christianeverett">
-        <span id="LinkedIn">LinkedIn</span>
-    </a>
-    <a href="https://github.com/ChristianEverett">
-        <span id="Github">Github</span>
-    </a>
-</div>
-
-<!-- Button table for selecting an Assignment (Assignment 2 and 3 is the page itself) -->
-<table id="ButtonTable">
-    <tr><!--onclick="window.location.href='empty.html'"-->
-        <td onclick="alert('Currently on Assignment 2')">Create Webpage</td>
-        <td onclick="alert('Currently on Assignment 3')">Add CSS</td>
-    </tr>
-
-    <tr>
-        <td onclick="window.location.href='https://christianeverett.github.io/91.461/public_html/'">Add to Github</td>
-        <td onclick="window.location.href='Format-Dynamic-Text.html'">Format Dynamic Text</td>
-    </tr>
-
-    <tr>
-        <td onclick="window.location.href='DynamicTable.html'">Create Dynamic Table</td>
-        <td class="empty">Single-Page Navigation</td>
-    </tr>
-
-    <tr>
-        <td class="empty">jQuery Validation Plugin</td>
-        <td class="empty">AngularJS</td>
-    </tr>
-</table>
 
 <script src="js/index.js">
 

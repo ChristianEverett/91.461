@@ -23,15 +23,15 @@ function submitNumbers()
     var tdArray = document.getElementsByTagName("td");
 
     //set the outer row and column with user entered values
-    tdArray[1].innerHTML = firstNumber;
-    tdArray[2].innerHTML = secondNumber;
-    tdArray[3].innerHTML = thirdNumber;
-    tdArray[4].innerHTML = fourthNumber;
+    tdArray[1].innerHTML = firstNumber!=""?firstNumber:0;
+    tdArray[2].innerHTML = secondNumber!=""?secondNumber:0;
+    tdArray[3].innerHTML = thirdNumber!=""?thirdNumber:0;
+    tdArray[4].innerHTML = fourthNumber!=""?fourthNumber:0;
 
-    tdArray[5].innerHTML = fifthNumber;
-    tdArray[10].innerHTML = sixthNumber;
-    tdArray[15].innerHTML = seventhNumber;
-    tdArray[20].innerHTML = eighthNumber;
+    tdArray[5].innerHTML = fifthNumber!=""?fifthNumber:0;
+    tdArray[10].innerHTML = sixthNumber!=""?sixthNumber:0;
+    tdArray[15].innerHTML = seventhNumber!=""?seventhNumber:0;
+    tdArray[20].innerHTML = eighthNumber!=""?eighthNumber:0;
 
     //set the inner rows to there current multiplication values
     for(var y = 6; y <= 25; y+=5)
