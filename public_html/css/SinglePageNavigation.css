@@ -1,0 +1,42 @@
+/*Christian Everett
+ceverett@cs.uml.edu
+Undergrad CS
+10/10/2015
+css for SinglePageNavigation.html
+SinglePageNavigation.css
+*/
+
+ul
+{
+    list-style-type: none;
+    margin-right: 30%;
+    padding: 0;
+    overflow: hidden;
+    float:right;
+}
+
+li
+{
+    float: left;
+}
+
+.list:link, .list:visited
+{
+    display: table-cell;
+    width: 200px;
+    height: 40px;
+    font-weight: bold;
+    color: black;
+    background-color: red;
+    text-align: center;
+    vertical-align: middle;
+    padding: 4px;
+    text-decoration: none;
+    text-transform: uppercase;
+    opacity: .8;
+}
+
+.list:hover, .list:active
+{
+    opacity: 1;
+}

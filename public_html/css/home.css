@@ -1,0 +1,28 @@
+body
+{
+    background: url("../Img/background2.jpg");
+}
+
+#header
+{
+    height: 150px;
+}
+
+#body
+{
+    background: black;
+    margin: auto;
+    width: 100vmin;
+    height: 600px;
+}
+
+p
+{
+    position: relative;
+    font-size: 20px;
+    text-align: center;
+    color: red;
+    margin-left: 50px;
+    margin-right: 50px;
+    top: 40px;
+}

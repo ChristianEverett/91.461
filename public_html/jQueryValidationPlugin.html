@@ -2,16 +2,22 @@
 <!-- Christian Everett
 	 ceverett@cs.uml.edu
 	 Undergrad CS
-	 9/28/2015
-	 assignment 6 for 91.461
-	 DynamicTable.html
+	 10/28/2015
+	 assignment 7 for 91.461
+	 jQueryValidationPlugin.html
 -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <!-- links the CSS source and jquery librays for this HTML document -->
-    <link type="text/css" rel="stylesheet" href="css/DynamicTable.css"/>
-    <title>Dynamic Table</title>
+    <link type="text/css" rel="stylesheet" href="css/jQueryValidationPlugin.css"/>
+    <!--jQuery Libary-->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="js/jquery.watermark.js"></script>
+    <!--jQuery validation plugin-->
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.js"></script>
+
+    <title>QueryValidationPlugin</title>
 </head>
 <body>
 <!--validator code-->
@@ -21,25 +27,26 @@
     </a>
 </p>
 
-<h1>Dynamic Table Assignment</h1>
+<h1>QueryValidationPlugin</h1>
 <br><br>
 
 <!--form used to accept input of eight numbers from user.
     on submit submitNumber javascript function processes input.
-    inputs are of type number to force the user to only enter valid data-->
-<form action="javascript:submitNumbers()">
+    inputs are of type number to force the user to only enter valid data
+    All fields here are required and will be validated with the jQuery validation plugin-->
+<form action="javascript:submitNumbers()" id="multiplicationForm">
     <label>Enter four numbers for each column:</label>
-    <input type="number" id="first_number">
-    <input type="number" id="second_number">
-    <input type="number" id="third_number">
-    <input type="number" id="fourth_number">
+    <input type="number" id="first_number" name="first_number">
+    <input type="number" id="second_number" name="second_number">
+    <input type="number" id="third_number" name="third_number">
+    <input type="number" id="fourth_number" name="fourth_number">
     <br>
     <br>
     <label>Enter four numbers for each row:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
-    <input type="number" id="fifth_number">
-    <input type="number" id="sixth_number">
-    <input type="number" id="seventh_number">
-    <input type="number" id="eighth_number">
+    <input type="number" id="fifth_number" name="fifth_number">
+    <input type="number" id="sixth_number" name="sixth_number">
+    <input type="number" id="seventh_number" name="seventh_number">
+    <input type="number" id="eighth_number" name="eighth_number">
     <input type="submit" value="Submit">
 </form>
 
@@ -83,8 +90,7 @@
 </table>
 
 <!--javascript for this html file-->
-<script src="js/DynamicTable.js">
-</script>
+<script src="js/jQueryValidationPlugin.js"></script>
 
 </body>
 </html>

@@ -29,6 +29,7 @@ table
     left: 42%;
     border: solid black 2px;
     padding-top: 10px;
+    z-index: -1;
 }
 /*space out the table elements */
 td

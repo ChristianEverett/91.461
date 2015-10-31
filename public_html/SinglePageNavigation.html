@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!-- Christian Everett
+	 ceverett@cs.uml.edu
+	 Undergrad CS
+	 10/10/2015
+	 91.461 assignment 8
+	 SinglePageNavigation.html
+-->
+<html>
+<head>
+    <!-- links the CSS source and jquery library for this HTML document -->
+    <link type="text/css" rel="stylesheet" href="css/SinglePageNavigation.css"/>
+    <!--jQuery Libary-->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <!--jQuery_UI Libary-->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+
+    <title>Christian Everett</title>
+</head>
+<body>
+
+<!--Menu for navigating fragments -->
+<ul>
+    <li><a class="list" href="#home">Home</a></li>
+    <li><a class="list" href="#Format-Dynamic-Text">Format Dynamic Text</a></li>
+    <li><a class="list" href="#DynamicTable">Dynamic Table</a></li>
+    <li><a class="list" href="#empty">Empty</a></li>
+</ul>
+
+<!-- Javascript will place dynamic content in fragment holder for each page -->
+<div id="fragmentHolder"></div>
+
+<!-- Javascript code to handle loading each page fragment -->
+<script src="js/SinglePageNavigation.js"></script>
+
+<!--Javascript for index fragment -->
+<script src="js/index.js"></script>
+
+<!--javascript for handling the json parsing and ajax call-->
+<script src="js/Format-Dynamic-Text.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,65 @@
+/**
+ Created by Christian Everett on 10/28/2015.
+ ceverett@cs.uml.edu
+ Undergrad CS
+ css for 91.461 assignment 7
+ jQueryValidationPlugin.css
+ */
+h1
+{
+    color: white;
+    text-align: center;
+}
+p
+{
+    float: left;
+}
+body
+{
+    background-color: black;
+}
+td
+{
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    background-color: red;
+    font-size: 20px;
+}
+td:hover
+{
+    opacity: 0.8;
+}
+
+label
+{
+    color: white;
+}
+/*The very first td is not used, blend it in with background*/
+#multiplicationTable tr:first-child td:first-child
+{
+    background-color: black;
+}
+#multiplicationTable
+{
+    position: absolute;
+    left: 45%;
+    top: 35%;
+}
+/*Top row inputs */
+#multiplicationTable tr:first-child td
+{
+    background-color: green;
+}
+/*left column inputs */
+#multiplicationTable tr td:first-child
+{
+    background-color: green;
+}
+/*Class used for error fields in jQuery validation*/
+.error
+{
+    border-color:red;
+    border-style:solid;
+    border-width:1px;
+}
