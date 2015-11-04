@@ -56,6 +56,12 @@ label
 {
     background-color: green;
 }
+#errorMessage
+{
+    position: absolute;
+    left: 45%;
+    color: red;
+}
 /*Class used for error fields in jQuery validation*/
 .error
 {
