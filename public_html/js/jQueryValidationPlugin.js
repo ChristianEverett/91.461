@@ -53,47 +53,63 @@ $(document).ready(function ()
         {
             first_number:
             {
-                required: true
+                required: true,
             },
             second_number:
             {
-                required: true
+                required: true,
             },
             third_number:
             {
-                required: true
+                required: true,
             },
             fourth_number:
             {
-                required: true
+                required: true,
             },
             fifth_number:
             {
-                required: true
+                required: true,
             },
             sixth_number:
             {
-                required: true
+                required: true,
             },
             seventh_number:
             {
-                required: true
+                required: true,
             },
             eighth_number:
             {
-                required: true
+                required: true,
             }
         },
         messages:
         {
-            first_number: "Required Field",
-            second_number: "Required Field",
-            third_number: "Required Field",
-            fourth_number: "Required Field",
-            fifth_number: "Required Field",
-            sixth_number: "Required Field",
-            seventh_number: "Required Field",
-            eighth_number: "Required Field"
+            first_number: {
+                required: "Required Field",
+            },
+            second_number: {
+                required: "Required Field",
+            },
+            third_number: {
+                required: "Required Field",
+            },
+            fourth_number: {
+                required: "Required Field",
+            },
+            fifth_number: {
+                required: "Required Field",
+            },
+            sixth_number: {
+                required: "Required Field",
+            },
+            seventh_number: {
+                required: "Required Field",
+            },
+            eighth_number: {
+                required: "Required Field",
+            }
         },
         showErrors: function(errorMap, errorList)
         {
