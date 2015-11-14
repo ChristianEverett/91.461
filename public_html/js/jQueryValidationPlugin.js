@@ -54,61 +54,77 @@ $(document).ready(function ()
             first_number:
             {
                 required: true,
+                maxlength: 6
             },
             second_number:
             {
                 required: true,
+                maxlength: 6
             },
             third_number:
             {
                 required: true,
+                maxlength: 6
             },
             fourth_number:
             {
                 required: true,
+                maxlength: 6
             },
             fifth_number:
             {
                 required: true,
+                maxlength: 6
             },
             sixth_number:
             {
                 required: true,
+                maxlength: 6
             },
             seventh_number:
             {
                 required: true,
+                maxlength: 6
             },
             eighth_number:
             {
                 required: true,
+                maxlength: 6
             }
         },
         messages:
         {
             first_number: {
                 required: "Required Field",
+                maxlength: "Six digit number max"
             },
             second_number: {
                 required: "Required Field",
+                maxlength: "Six digit number max"
             },
             third_number: {
                 required: "Required Field",
+                maxlength: "Six digit number max"
             },
             fourth_number: {
                 required: "Required Field",
+                maxlength: "Six digit number max"
             },
             fifth_number: {
                 required: "Required Field",
+                maxlength: "Six digit number max"
             },
             sixth_number: {
                 required: "Required Field",
+                maxlength: "Six digit number max"
             },
             seventh_number: {
                 required: "Required Field",
+                maxlength: "Six digit number max"
             },
             eighth_number: {
                 required: "Required Field",
+                maxlength: "Six digit number max"
             }
         },
         showErrors: function(errorMap, errorList)
@@ -118,8 +134,15 @@ $(document).ready(function ()
         },
         errorPlacement: function(error, element)
         {
-            //Place the validation error message in the input field as a watermark
-            element.watermark(error[0].innerHTML);
+            if(error[0].innerHTML == "Six digit number max")
+            {
+                $(error).appendTo( $("#errorMessage") ) ;
+            }
+            else
+            {
+                //Place the validation error message in the input field as a watermark
+                element.watermark(error[0].innerHTML);
+            }
         }
 
     });
