@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8926d0b0-9a78-42c7-bd85-3c779bde18a1" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/TabWidget.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TabWidget.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/TabWidget.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/jQueryValidationPlugin.js" afterPath="$PROJECT_DIR$/js/jQueryValidationPlugin.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/TabWidget.js" afterPath="$PROJECT_DIR$/js/TabWidget.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="public_html.iws" />
@@ -28,28 +24,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="TabWidget.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TabWidget.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TabWidget.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.23852183">
-              <caret line="49" column="40" selection-start-line="49" selection-start-column="40" selection-end-line="49" selection-end-column="40" />
+            <state vertical-scroll-proportion="-6.8846154">
+              <caret line="47" column="63" selection-start-line="47" selection-start-column="63" selection-end-line="47" selection-end-column="63" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TabWidget.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="TabWidget.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/TabWidget.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="291" column="9" selection-start-line="291" selection-start-column="9" selection-end-line="291" selection-end-column="9" />
+            <state vertical-scroll-proportion="0.4820457">
+              <caret line="58" column="0" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
               <folding>
-                <marker date="1447468395043" expanded="false" signature="2000:2530" placeholder="..." />
-                <marker date="1447468395043" expanded="true" signature="2011:2103" placeholder="..." />
-                <marker date="1447468395043" expanded="true" signature="2114:2206" placeholder="..." />
-                <marker date="1447468395043" expanded="true" signature="2217:2309" placeholder="..." />
-                <marker date="1447468395043" expanded="true" signature="2320:2412" placeholder="..." />
-                <marker date="1447468395043" expanded="true" signature="2423:2515" placeholder="..." />
+                <marker date="1447469778485" expanded="false" signature="2002:2532" placeholder="..." />
+                <marker date="1447469778485" expanded="true" signature="2013:2105" placeholder="..." />
+                <marker date="1447469778485" expanded="true" signature="2116:2208" placeholder="..." />
+                <marker date="1447469778485" expanded="true" signature="2219:2311" placeholder="..." />
+                <marker date="1447469778485" expanded="true" signature="2322:2414" placeholder="..." />
+                <marker date="1447469778485" expanded="true" signature="2425:2517" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -636,13 +632,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.8461537">
-          <caret line="12" column="24" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Format-Dynamic-Text.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.11422172">
@@ -673,6 +662,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.29451287">
+          <caret line="12" column="24" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TabWidget.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.8846154">
+          <caret line="47" column="63" selection-start-line="47" selection-start-column="63" selection-end-line="47" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/css/TabWidget.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -683,24 +688,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/TabWidget.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="291" column="9" selection-start-line="291" selection-start-column="9" selection-end-line="291" selection-end-column="9" />
+        <state vertical-scroll-proportion="0.4820457">
+          <caret line="58" column="0" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
           <folding>
-            <marker date="1447468395043" expanded="false" signature="2000:2530" placeholder="..." />
-            <marker date="1447468395043" expanded="true" signature="2011:2103" placeholder="..." />
-            <marker date="1447468395043" expanded="true" signature="2114:2206" placeholder="..." />
-            <marker date="1447468395043" expanded="true" signature="2217:2309" placeholder="..." />
-            <marker date="1447468395043" expanded="true" signature="2320:2412" placeholder="..." />
-            <marker date="1447468395043" expanded="true" signature="2423:2515" placeholder="..." />
+            <marker date="1447469778485" expanded="false" signature="2002:2532" placeholder="..." />
+            <marker date="1447469778485" expanded="true" signature="2013:2105" placeholder="..." />
+            <marker date="1447469778485" expanded="true" signature="2116:2208" placeholder="..." />
+            <marker date="1447469778485" expanded="true" signature="2219:2311" placeholder="..." />
+            <marker date="1447469778485" expanded="true" signature="2322:2414" placeholder="..." />
+            <marker date="1447469778485" expanded="true" signature="2425:2517" placeholder="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TabWidget.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.23852183">
-          <caret line="49" column="40" selection-start-line="49" selection-start-column="40" selection-end-line="49" selection-end-column="40" />
-          <folding />
         </state>
       </provider>
     </entry>

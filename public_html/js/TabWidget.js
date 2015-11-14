@@ -57,7 +57,7 @@ function onClickCloseButton(event)
     $("#li" + tabNumberToRemove[0]).remove();
     $("#tabs-" + tabNumberToRemove[0]).remove();
 
-    numberOfTabs--;
+    //numberOfTabs--;
     $("#tabs").tabs("refresh");
 }
 
@@ -216,8 +216,18 @@ $(document).ready(function ()
         //Button for removing all tabs
         $("#closeAllTabs").button().click(function(event)
         {
-            $("#tabs").empty();
+            //clear all tabs
+            $("#tabs ul").empty();
             numberOfTabs = 0;
+
+            //clear all tab data
+            $("#tabs div").each(function()
+            {
+                if($(this).is("div"))
+                {
+                    $(this).remove();
+                }
+            });
         });
 
         $("#tabs").tabs();
