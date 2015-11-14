@@ -103,9 +103,12 @@ function generateTab(tabNumber)
     </table>';
     //button to close the current tab
     var closeButton = '<button id="' + tabNumber +'Button">Close Tab</button>';
+    //create tab name
+    var tabName = inputArray[0].val() + ", " + inputArray[1].val() + ", " + inputArray[2].val() + ", " + inputArray[3].val() +
+        " * " + inputArray[4].val() + ", " + inputArray[5].val() + ", " + inputArray[6].val() + ", " + inputArray[7].val();
 
     //build tab and tab data then append them to the div
-    var newTab = '<li id="li' + tabNumber + '"><a href="#tabs-' + tabNumber + '">table ' + tabNumber + '</a></li>';
+    var newTab = '<li id="li' + tabNumber + '"><a href="#tabs-' + tabNumber + '">' + tabName + '</a></li>';
     var newData = '<div id = "tabs-' + tabNumber + '">' + table + closeButton + '</div>';
     $("#tabs ul").append(newTab);
     $("#tabs").append(newData);
@@ -208,6 +211,7 @@ $(document).ready(function ()
         //The following sets up two way binding
 
         //set all sliders on change listener
+        sliderArray.forEach(function (slider){slider.slider({slide: onSliderChanged})});
         sliderArray.forEach(function (slider){slider.slider({change: onSliderChanged})});
 
         //set all inputs  change listener
@@ -230,6 +234,7 @@ $(document).ready(function ()
             });
         });
 
+        $("#submitButton").button();
         $("#tabs").tabs();
     })();
 

@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8926d0b0-9a78-42c7-bd85-3c779bde18a1" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TabWidget.html" afterPath="$PROJECT_DIR$/TabWidget.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/TabWidget.js" afterPath="$PROJECT_DIR$/js/TabWidget.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="public_html.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,8 +27,8 @@
       <file leaf-file-name="TabWidget.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TabWidget.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.8846154">
-              <caret line="47" column="63" selection-start-line="47" selection-start-column="63" selection-end-line="47" selection-end-column="63" />
+            <state vertical-scroll-proportion="-20.615385">
+              <caret line="68" column="43" selection-start-line="68" selection-start-column="43" selection-end-line="68" selection-end-column="43" />
               <folding />
             </state>
           </provider>
@@ -37,15 +37,15 @@
       <file leaf-file-name="TabWidget.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/TabWidget.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4820457">
-              <caret line="58" column="0" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.4069641">
+              <caret line="208" column="44" selection-start-line="208" selection-start-column="44" selection-end-line="208" selection-end-column="44" />
               <folding>
-                <marker date="1447469778485" expanded="false" signature="2002:2532" placeholder="..." />
-                <marker date="1447469778485" expanded="true" signature="2013:2105" placeholder="..." />
-                <marker date="1447469778485" expanded="true" signature="2116:2208" placeholder="..." />
-                <marker date="1447469778485" expanded="true" signature="2219:2311" placeholder="..." />
-                <marker date="1447469778485" expanded="true" signature="2322:2414" placeholder="..." />
-                <marker date="1447469778485" expanded="true" signature="2425:2517" placeholder="..." />
+                <marker date="1447472803449" expanded="false" signature="2002:2532" placeholder="..." />
+                <marker date="1447472803449" expanded="true" signature="2013:2105" placeholder="..." />
+                <marker date="1447472803449" expanded="true" signature="2116:2208" placeholder="..." />
+                <marker date="1447472803449" expanded="true" signature="2219:2311" placeholder="..." />
+                <marker date="1447472803449" expanded="true" signature="2322:2414" placeholder="..." />
+                <marker date="1447472803449" expanded="true" signature="2425:2517" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -670,14 +670,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TabWidget.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.8846154">
-          <caret line="47" column="63" selection-start-line="47" selection-start-column="63" selection-end-line="47" selection-end-column="63" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/TabWidget.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -686,17 +678,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/TabWidget.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-20.615385">
+          <caret line="68" column="43" selection-start-line="68" selection-start-column="43" selection-end-line="68" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/js/TabWidget.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4820457">
-          <caret line="58" column="0" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.4069641">
+          <caret line="208" column="44" selection-start-line="208" selection-start-column="44" selection-end-line="208" selection-end-column="44" />
           <folding>
-            <marker date="1447469778485" expanded="false" signature="2002:2532" placeholder="..." />
-            <marker date="1447469778485" expanded="true" signature="2013:2105" placeholder="..." />
-            <marker date="1447469778485" expanded="true" signature="2116:2208" placeholder="..." />
-            <marker date="1447469778485" expanded="true" signature="2219:2311" placeholder="..." />
-            <marker date="1447469778485" expanded="true" signature="2322:2414" placeholder="..." />
-            <marker date="1447469778485" expanded="true" signature="2425:2517" placeholder="..." />
+            <marker date="1447472803449" expanded="false" signature="2002:2532" placeholder="..." />
+            <marker date="1447472803449" expanded="true" signature="2013:2105" placeholder="..." />
+            <marker date="1447472803449" expanded="true" signature="2116:2208" placeholder="..." />
+            <marker date="1447472803449" expanded="true" signature="2219:2311" placeholder="..." />
+            <marker date="1447472803449" expanded="true" signature="2322:2414" placeholder="..." />
+            <marker date="1447472803449" expanded="true" signature="2425:2517" placeholder="..." />
           </folding>
         </state>
       </provider>
