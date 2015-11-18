@@ -114,6 +114,7 @@ function generateTab(tabNumber)
     $("#tabs").append(newData);
 
     $("#tabs").tabs("refresh");
+    $("#tabs").tabs({active: numberOfTabs - 1});
 }
 
 //This method binds the sliders to the inputs

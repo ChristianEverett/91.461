@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8926d0b0-9a78-42c7-bd85-3c779bde18a1" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TabWidget.html" afterPath="$PROJECT_DIR$/TabWidget.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/TabWidget.js" afterPath="$PROJECT_DIR$/js/TabWidget.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="public_html.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,8 +27,8 @@
       <file leaf-file-name="TabWidget.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TabWidget.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-20.615385">
-              <caret line="68" column="43" selection-start-line="68" selection-start-column="43" selection-end-line="68" selection-end-column="43" />
+            <state vertical-scroll-proportion="-37.26923">
+              <caret line="57" column="63" selection-start-line="57" selection-start-column="63" selection-end-line="57" selection-end-column="63" />
               <folding />
             </state>
           </provider>
@@ -37,15 +37,15 @@
       <file leaf-file-name="TabWidget.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/TabWidget.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4069641">
-              <caret line="208" column="44" selection-start-line="208" selection-start-column="44" selection-end-line="208" selection-end-column="44" />
+            <state vertical-scroll-proportion="0.110990204">
+              <caret line="41" column="65" selection-start-line="41" selection-start-column="65" selection-end-line="41" selection-end-column="65" />
               <folding>
-                <marker date="1447472803449" expanded="false" signature="2002:2532" placeholder="..." />
-                <marker date="1447472803449" expanded="true" signature="2013:2105" placeholder="..." />
-                <marker date="1447472803449" expanded="true" signature="2116:2208" placeholder="..." />
-                <marker date="1447472803449" expanded="true" signature="2219:2311" placeholder="..." />
-                <marker date="1447472803449" expanded="true" signature="2322:2414" placeholder="..." />
-                <marker date="1447472803449" expanded="true" signature="2425:2517" placeholder="..." />
+                <marker date="1447868293595" expanded="false" signature="2002:2532" placeholder="..." />
+                <marker date="1447868293595" expanded="true" signature="2013:2105" placeholder="..." />
+                <marker date="1447868293595" expanded="true" signature="2116:2208" placeholder="..." />
+                <marker date="1447868293595" expanded="true" signature="2219:2311" placeholder="..." />
+                <marker date="1447868293595" expanded="true" signature="2322:2414" placeholder="..." />
+                <marker date="1447868293595" expanded="true" signature="2425:2517" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -146,6 +146,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -195,7 +196,6 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -289,7 +289,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21354167" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -639,14 +639,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DynamicTable.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8566629">
-          <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="75" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/DynamicTable.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.48095757">
@@ -666,7 +658,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.29451287">
           <caret line="12" column="24" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -678,25 +669,33 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/DynamicTable.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.57110864">
+          <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="75" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/TabWidget.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-20.615385">
-          <caret line="68" column="43" selection-start-line="68" selection-start-column="43" selection-end-line="68" selection-end-column="43" />
+        <state vertical-scroll-proportion="-37.26923">
+          <caret line="57" column="63" selection-start-line="57" selection-start-column="63" selection-end-line="57" selection-end-column="63" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/TabWidget.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4069641">
-          <caret line="208" column="44" selection-start-line="208" selection-start-column="44" selection-end-line="208" selection-end-column="44" />
+        <state vertical-scroll-proportion="0.110990204">
+          <caret line="41" column="65" selection-start-line="41" selection-start-column="65" selection-end-line="41" selection-end-column="65" />
           <folding>
-            <marker date="1447472803449" expanded="false" signature="2002:2532" placeholder="..." />
-            <marker date="1447472803449" expanded="true" signature="2013:2105" placeholder="..." />
-            <marker date="1447472803449" expanded="true" signature="2116:2208" placeholder="..." />
-            <marker date="1447472803449" expanded="true" signature="2219:2311" placeholder="..." />
-            <marker date="1447472803449" expanded="true" signature="2322:2414" placeholder="..." />
-            <marker date="1447472803449" expanded="true" signature="2425:2517" placeholder="..." />
+            <marker date="1447868293595" expanded="false" signature="2002:2532" placeholder="..." />
+            <marker date="1447868293595" expanded="true" signature="2013:2105" placeholder="..." />
+            <marker date="1447868293595" expanded="true" signature="2116:2208" placeholder="..." />
+            <marker date="1447868293595" expanded="true" signature="2219:2311" placeholder="..." />
+            <marker date="1447868293595" expanded="true" signature="2322:2414" placeholder="..." />
+            <marker date="1447868293595" expanded="true" signature="2425:2517" placeholder="..." />
           </folding>
         </state>
       </provider>
