@@ -1,0 +1,58 @@
+/**
+ Created by Christian Everett on 11/12/2015.
+ ceverett@cs.uml.edu
+ Undergrad CS
+ css for 91.461 assignment 9
+ Scrabble.css
+ */
+h1
+{
+    color: red;
+    text-align: center;
+}
+body
+{
+    background: url("../Img/background2.jpg");
+}
+#scrabbleBoard
+{
+    margin-left: 100px;
+    margin-right: 100px;
+
+    width: 1700px;
+    height: 180px;
+}
+/*Position tiles*/
+.tile
+{
+    width: 95px;
+    height: 140px;
+    margin-left: 15px;
+}
+#tile_rack
+{
+    margin-top: 100px;
+    margin-left: 500px;
+    margin-right: 500px;
+}
+/*Box containing word text and submit button*/
+#wordBox
+{
+    background-color: black;
+    width: 400px;
+    height: 200px;
+    margin-left: 720px;
+    margin-right: 720px;
+    text-align: center;
+}
+#submit_button
+{
+    margin-top: 60px;
+}
+label
+{
+    font-size: 25px;
+    color: red;
+}
+
+
