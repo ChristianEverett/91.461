@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8926d0b0-9a78-42c7-bd85-3c779bde18a1" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/Scrabble.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Scrabble.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/Scrabble.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TabWidget.html" afterPath="$PROJECT_DIR$/TabWidget.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
     </list>
     <ignored path="public_html.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -97,7 +93,6 @@
         <option value="$PROJECT_DIR$/css/jQueryValidationPlugin.css" />
         <option value="$PROJECT_DIR$/jQueryValidationPlugin.html" />
         <option value="$PROJECT_DIR$/js/jQueryValidationPlugin.js" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/TabWidgets.html" />
         <option value="$PROJECT_DIR$/test.html" />
         <option value="$PROJECT_DIR$/css/TabWidget.css" />
@@ -106,6 +101,7 @@
         <option value="$PROJECT_DIR$/Scrabble.html" />
         <option value="$PROJECT_DIR$/css/Scrabble.css" />
         <option value="$PROJECT_DIR$/js/Scrabble.js" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
@@ -586,13 +582,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.29451287">
-          <caret line="12" column="24" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DynamicTable.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.57110864">
@@ -681,6 +670,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-28.461538">
           <caret line="68" column="8" selection-start-line="68" selection-start-column="8" selection-end-line="68" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.20044793">
+          <caret line="38" column="47" selection-start-line="38" selection-start-column="47" selection-end-line="38" selection-end-column="47" />
           <folding />
         </state>
       </provider>
