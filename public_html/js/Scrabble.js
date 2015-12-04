@@ -12,34 +12,25 @@ var scrabble_slots_array = new Array(15);
 //Word Score
 var score = 0;
 
+var dictionary = {};
+
 //On user submit check word is valid
 function submit(event)
 {
-    console.log("Submit Successful");
+    console.log("Submit Successful: " + $("#word").text());
 
-    //reset score
-    score = 0;
-
-    //go through each filled slot on the board
-    for (i = 0; i < scrabble_slots_array.length; i++)
+    if(dictionary[$("#word").text()] == true)
     {
-        if (scrabble_slots_array[i] != undefined && scrabble_slots_array[i].length > 0)
-            //for each filled slot find its value and add it to score
-            for(x = 0; x < scrabbleTiles.length; x++)
-            {
-                if(scrabbleTiles[x].char == scrabble_slots_array[i])
-                    score += scrabbleTiles[x].value;
-            }
+        alert("Word is in dict");
     }
-
-    //update the score
-    $("#score").text(score);
 }
 
 //Method called after scrabble board changes
 //Updates the UI after changes are made to the board
-function updateScrabbleBoard(newText)
+function updateScrabbleWord()
 {
+    var newText = "";
+
     //go through all the characters currently on the board and build a new string with them
     for (i = 0; i < scrabble_slots_array.length; i++)
     {
@@ -50,15 +41,42 @@ function updateScrabbleBoard(newText)
     //replace hold string with updated one
     $("#word").text(newText);
 }
+function updateScore()
+{
+//reset score
+    score = 0;
+
+    //go through each filled slot on the board
+    for (i = 0; i < scrabble_slots_array.length; i++)
+    {
+        if (scrabble_slots_array[i] != undefined && scrabble_slots_array[i].length > 0)
+        //for each filled slot find its value and add it to score
+            for (x = 0; x < scrabbleTiles.length; x++)
+            {
+                if (scrabbleTiles[x].char == scrabble_slots_array[i])
+                    score += scrabbleTiles[x].value;
+            }
+    }
+
+    //update the score
+    $("#score").text(score);
+}
 function tileDropped(event, ui)
 {
     console.log("tile: " + ui.draggable.attr("id") + " dropped");
 
+    ui.draggable.position(
+    {
+        my: "center",
+        at: "center",
+        of: $(this)
+    });
+
     //add tile to board
     scrabble_slots_array[$(this).attr("id")] = ui.draggable.attr("alt");
 
-    var newText = "";
-    updateScrabbleBoard(newText);
+    updateScore();
+    updateScrabbleWord();
 }
 
 function tileRemoved(event, ui)
@@ -70,9 +88,8 @@ function tileRemoved(event, ui)
         //remove tile from board
         scrabble_slots_array[$(this).attr("id")] = "";
 
-    var newText = "";
-
-    updateScrabbleBoard(newText);
+    updateScore();
+    updateScrabbleWord();
 }
 
 function generateTiles()
@@ -110,6 +127,20 @@ $(document).ready(function ()
     (function()
     {
         generateTiles();
+
+        // Do a jQuery Ajax request for the text dictionary
+        $.get( "download/american-english.txt", function( file )
+        {
+            // Get an array of all the words
+            var dict = file.split( "\n" );
+
+            // And add them as properties to the dictionary lookup
+            // This will allow for fast lookups later
+            for ( var i = 0; i < dict.length; i++ )
+            {
+                dictionary[ dict[i] ] = true;
+            }
+        });
 
         $("#submit_button").button().click(submit);
         $(".tile" ).draggable();
