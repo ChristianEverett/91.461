@@ -19,9 +19,9 @@ function submit(event)
 {
     console.log("Submit Successful: " + $("#word").text());
 
-    if(dictionary[$("#word").text()] == true)
+    if(!dictionary[$("#word").text().toLowerCase()] == true)
     {
-        alert("Word is in dict");
+        alert("Word is not in dict");
     }
 }
 
@@ -43,8 +43,9 @@ function updateScrabbleWord()
 }
 function updateScore()
 {
-//reset score
-    score = 0;
+    //reset score
+    var score = 0;
+    var doubleWord = false;
 
     //go through each filled slot on the board
     for (i = 0; i < scrabble_slots_array.length; i++)
@@ -54,9 +55,20 @@ function updateScore()
             for (x = 0; x < scrabbleTiles.length; x++)
             {
                 if (scrabbleTiles[x].char == scrabble_slots_array[i])
-                    score += scrabbleTiles[x].value;
+                    if(i == 6 || i == 8)
+                        score += scrabbleTiles[x].value*2;
+                    else if(i == 2 || i == 12)
+                    {
+                        score += scrabbleTiles[x].value;
+                        doubleWord = true;
+                    }
+                    else
+                        score += scrabbleTiles[x].value;
             }
     }
+
+    if(doubleWord == true)
+        score *= 2;
 
     //update the score
     $("#score").text(score);
@@ -138,7 +150,7 @@ $(document).ready(function ()
             // This will allow for fast lookups later
             for ( var i = 0; i < dict.length; i++ )
             {
-                dictionary[ dict[i] ] = true;
+                dictionary[ dict[i].toLowerCase() ] = true;
             }
         });
 
