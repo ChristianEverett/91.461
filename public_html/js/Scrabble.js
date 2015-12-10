@@ -11,6 +11,8 @@ var tilesLeft = 100;
 var scrabble_slots_array = new Array(15);
 //Word Score
 var score = 0;
+//round score
+var tempScore = 0;
 
 var dictionary = {};
 
@@ -19,9 +21,34 @@ function submit(event)
 {
     console.log("Submit Successful: " + $("#word").text());
 
+    //check if the word is in the dictionary file
     if(!dictionary[$("#word").text().toLowerCase()] == true)
     {
         alert("Word is not in dict");
+    }
+    else
+    {
+        var numberTilesRemoved = 0;
+        //carry score over from last round
+        score += tempScore;
+
+        //clear tiles from board
+        for(var i = 0; i < scrabble_slots_array.length; i++)
+        {
+            if(scrabble_slots_array[i] != undefined && scrabble_slots_array[i].length > 0)
+            {
+                $("#" + scrabble_slots_array[i]).remove();
+                scrabble_slots_array[i] = "";
+                //count how many tiles were removed
+                numberTilesRemoved++;
+            }
+        }
+
+        console.log("Adding " + numberTilesRemoved + " tiles");
+        //generate enough tiles to bring the count back to seven
+        generateTiles(numberTilesRemoved);
+        $("#word").text("");
+        $(".tile" ).draggable();
     }
 }
 
@@ -32,10 +59,10 @@ function updateScrabbleWord()
     var newText = "";
 
     //go through all the characters currently on the board and build a new string with them
-    for (i = 0; i < scrabble_slots_array.length; i++)
+    for (var i = 0; i < scrabble_slots_array.length; i++)
     {
         if (scrabble_slots_array[i] != undefined && scrabble_slots_array[i].length > 0)
-            newText += (scrabble_slots_array[i])
+            newText += $("#" + scrabble_slots_array[i]).attr("alt");
     }
 
     //replace hold string with updated one
@@ -44,39 +71,42 @@ function updateScrabbleWord()
 function updateScore()
 {
     //reset score
-    var score = 0;
+    tempScore = 0;
     var doubleWord = false;
 
     //go through each filled slot on the board
     for (i = 0; i < scrabble_slots_array.length; i++)
     {
         if (scrabble_slots_array[i] != undefined && scrabble_slots_array[i].length > 0)
-        //for each filled slot find its value and add it to score
+            //for each filled slot find its value and add it to score
             for (x = 0; x < scrabbleTiles.length; x++)
             {
-                if (scrabbleTiles[x].char == scrabble_slots_array[i])
+                if (scrabbleTiles[x].char == $("#" + scrabble_slots_array[i]).attr("alt"))
+                    //double letter score
                     if(i == 6 || i == 8)
-                        score += scrabbleTiles[x].value*2;
+                        tempScore += scrabbleTiles[x].value*2;
+                    //double word score
                     else if(i == 2 || i == 12)
                     {
-                        score += scrabbleTiles[x].value;
+                        tempScore += scrabbleTiles[x].value;
                         doubleWord = true;
                     }
                     else
-                        score += scrabbleTiles[x].value;
+                        tempScore += scrabbleTiles[x].value;
             }
     }
 
     if(doubleWord == true)
-        score *= 2;
+        tempScore *= 2;
 
     //update the score
-    $("#score").text(score);
+    $("#score").text(tempScore + score);
 }
 function tileDropped(event, ui)
 {
     console.log("tile: " + ui.draggable.attr("id") + " dropped");
 
+    //snap tile into position
     ui.draggable.position(
     {
         my: "center",
@@ -85,7 +115,7 @@ function tileDropped(event, ui)
     });
 
     //add tile to board
-    scrabble_slots_array[$(this).attr("id")] = ui.draggable.attr("alt");
+    scrabble_slots_array[$(this).attr("id")] = ui.draggable.attr("id");
 
     updateScore();
     updateScrabbleWord();
@@ -104,10 +134,10 @@ function tileRemoved(event, ui)
     updateScrabbleWord();
 }
 
-function generateTiles()
+function generateTiles(numberTiles)
 {
     //Generate seven tiles
-    for(i = 0; i < 7; i++)
+    for(i = 0; i < numberTiles; i++)
     {
         //randomly choose a tile from the remaining tiles (tiles left)
         var tileNumber = Math.floor((Math.random() * tilesLeft) + 1);
@@ -130,7 +160,7 @@ function generateTiles()
 
         //parse the filename for just the one letter character
         var char = tile.substring(14, 15);
-        $("#tile_rack").append("<img src=Img/" + tile + " alt=" + char + " class='tile' id=" + char +" />");
+        $("#tile_rack").append("<img src=Img/" + tile + " alt=" + char + " class='tile' id=" + char + tilesLeft +" />");
     }
 }
 
@@ -138,7 +168,7 @@ $(document).ready(function ()
 {
     (function()
     {
-        generateTiles();
+        generateTiles(7);
 
         // Do a jQuery Ajax request for the text dictionary
         $.get( "download/american-english.txt", function( file )
