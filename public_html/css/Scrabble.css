@@ -14,7 +14,7 @@ body
 {
     background: url("../Img/background2.jpg");
 }
-#scrabbleBoard
+#scrabbleBoard, #scrabbleBoard2
 {
     margin-left: 100px;
     margin-right: 100px;
@@ -31,7 +31,7 @@ body
 }
 #tile_rack
 {
-    margin-top: 100px;
+    margin-top: 10px;
     margin-left: 500px;
     margin-right: 500px;
 }
