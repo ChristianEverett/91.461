@@ -83,10 +83,10 @@ function updateScore()
             {
                 if (scrabbleTiles[x].char == $("#" + scrabble_slots_array[i]).attr("alt"))
                     //double letter score
-                    if(i == 6 || i == 8)
+                    if(i == 6 || i == 8 || i == 21 || i == 23)
                         tempScore += scrabbleTiles[x].value*2;
                     //double word score
-                    else if(i == 2 || i == 12)
+                    else if(i == 2 || i == 12 || i == 17 || i == 27)
                     {
                         tempScore += scrabbleTiles[x].value;
                         doubleWord = true;
